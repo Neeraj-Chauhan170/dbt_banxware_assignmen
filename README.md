@@ -9,7 +9,7 @@ This project analyzes sales data by ingesting CSV files into Snowflake, transfor
 Clone the repository to your local machine:
 
 ```bash
-git clone <repository_url>
+git clone https://github.com/Neeraj-Chauhan170/dbt_banxware_assignmen.git
 cd <repository_directory>
 ```
 
