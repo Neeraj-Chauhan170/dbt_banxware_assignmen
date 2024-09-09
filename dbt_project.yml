@@ -26,9 +26,9 @@ clean-targets:         # directories to be removed by `dbt clean`
 seeds:
   banxware_assignment:
     sales:
-      +alias: raw_sales_data  # Rename 'sales.csv' table to 'raw_sales'
+      +alias: raw_sales_data  # Rename 'sales.csv' table to 'raw_sales_data'
     customers:
-      +alias: raw_customer_data  # Rename 'customers.csv' table to 'raw_customer'
+      +alias: raw_customer_data  # Rename 'customers.csv' table to 'raw_customer_data'
 # Configuring models
 # Full documentation: https://docs.getdbt.com/docs/configuring-models
 
