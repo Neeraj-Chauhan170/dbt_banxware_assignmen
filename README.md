@@ -12,7 +12,7 @@ This project aims to analyze sales data by ingesting CSV files into a Snowflake 
 
 To begin, clone the repository containing the dbt project and the sample dataset files:
 
-git clone <repository_url> 
+git clone <https://github.com/Neeraj-Chauhan170/dbt_banxware_assignmen.git> 
 cd <repository_directory>
 
 
