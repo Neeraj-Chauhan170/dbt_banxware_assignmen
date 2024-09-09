@@ -13,11 +13,13 @@ git clone https://github.com/Neeraj-Chauhan170/dbt_banxware_assignmen.git
 cd <repository_directory>
 ```
 
-2. Configure Snowflake
-Ensure you have a Snowflake account and a database named home_assignment created.
+### 2. Configure Snowflake
 
-3. Configure profiles.yml
-Create a profiles.yml file in the ~/.dbt/ directory with the following content. Replace the placeholders with your Snowflake account details
+Ensure you have a Snowflake account and a database named `home_assignment` created.
+
+### 3. Configure profiles.yml
+
+Create a `profiles.yml` file in the _~/.dbt/_ directory with the following content. Replace the placeholders with your Snowflake account details
 
 ```bash
 dbt_banxware_assignment:
@@ -35,40 +37,41 @@ dbt_banxware_assignment:
   target: dev
 ```
 
-4. Verify the Connection
+### 4. Verify the Connection
+
 Run the following command to ensure dbt can connect to your Snowflake database:
 
 ```bash
 dbt debug
 ```
 
-5. Data Ingestion
-Load Data
-Run the following command to load the CSV files into Snowflake:
+### 5. Data Ingestion
+
+To load data, run the following command to load the CSV files into Snowflake:
 
 ```bash
 dbt seed
 ```
 
-This will create the raw_sales_data and raw_customer_data tables in Snowflake.
+This will create the `raw_sales_data` and `raw_customer_data` tables in Snowflake.
 
-6. Data Transformation
-Run Transformations
-Execute the transformation model with:
+### 6. Data Transformation
+
+To run the transformations, execute the transformation model with:
 
 ```bash
 dbt run --models transformed_sales_data
 ```
 
-This will create the transformed_sales_data table in Snowflake.
+This will create the `transformed_sales_data` table in Snowflake.
 
-7. Querying the Data
-Run Queries
+### 7. Querying the Data
+
 Execute the queries with:
 
 ```bash
 dbt run --models queries
 ```
 
-This will run all SQL files and generate the views in Snowflake.
+This will run all SQL query files and generate the views in Snowflake.
 
