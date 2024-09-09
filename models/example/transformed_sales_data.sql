@@ -1,4 +1,4 @@
--- models/transformed_sales_data.sql
+-- models/example/transformed_sales_data.sql
 
 {{ config(materialized='table') }}
 
