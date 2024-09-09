@@ -1,0 +1,16 @@
+
+  create or replace   view HOME_ASSIGNMENT.PUBLIC.top_5_customers_2023
+  
+   as (
+    SELECT 
+    c.NAME AS customer_name,
+    SUM(t.TOTAL_SALES_AMOUNT) AS total_sales
+FROM HOME_ASSIGNMENT.PUBLIC.TRANSFORMED_SALES_DATA t
+JOIN HOME_ASSIGNMENT.PUBLIC.RAW_CUSTOMER_DATA c
+    ON t.CUSTOMER_ID = c.ID
+WHERE t.ORDER_YEAR = 2023
+GROUP BY c.NAME
+ORDER BY total_sales DESC
+LIMIT 5
+  );
+

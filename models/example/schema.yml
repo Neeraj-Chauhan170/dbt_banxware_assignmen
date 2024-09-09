@@ -1,0 +1,51 @@
+
+version: 2
+
+models:
+  - name: my_first_dbt_model
+    description: "A starter dbt model"
+    columns:
+      - name: id
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
+
+  - name: my_second_dbt_model
+    description: "A starter dbt model"
+    columns:
+      - name: id
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
+
+
+  - name: transformed_sales_data
+    description: "This table contains transformed sales data with breakdowns by year, month, and day, as well as total sales amount for easier analysis."
+    columns:
+      - name: order_id
+        description: "The unique identifier for each order"
+        tests:
+          - unique
+          - not_null
+      - name: customer_id
+        description: "The ID of the customer who placed the order"
+        tests:
+          - not_null
+      - name: order_year
+        description: "The year when the order was placed"
+        tests:
+          - not_null
+      - name: order_month
+        description: "The month when the order was placed"
+        tests:
+          - not_null
+      - name: order_day
+        description: "The day when the order was placed"
+        tests:
+          - not_null
+      - name: total_sales_amount
+        description: "The total sales amount for the order"
+        tests:
+          - not_null
